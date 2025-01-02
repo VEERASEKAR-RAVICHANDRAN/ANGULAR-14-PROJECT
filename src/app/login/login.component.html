@@ -1,0 +1,32 @@
+<div class="login-container">
+    <h2>Login</h2>
+    <form (ngSubmit)="login()">
+      <label for="username">Username:</label>
+      <input
+        type="text"
+        id="username"
+        [(ngModel)]="credentials.username"
+        name="username"
+        required
+      />
+      <br />
+  
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        [(ngModel)]="credentials.password"
+        name="password"
+        required
+      />
+      <br />
+  
+      <button type="submit">Login</button>
+    </form>
+    <p>
+      Don't have an account? <a routerLink="/register">Register here</a>.
+    </p>
+  </div>
+  <p class="fs-5 fw-bold color-light">The food and the restarunt of your choice</p>
+
+  

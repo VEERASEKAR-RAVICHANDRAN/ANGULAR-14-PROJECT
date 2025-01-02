@@ -1,0 +1,40 @@
+<div class="banner">
+  <!-- navigation-bar -->
+  <div class="container-fluid top">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid ms-5">
+        <a href="https://www.zomato.com/mobile" class="p-2"><i class="bi bi-phone"></i> Get our app</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0 ms-auto me-3">
+            <li class="nav-item ms-4">
+              <a class="nav-link" routerLink="">Home</a> <!-- Home points to cart -->
+            </li>
+            <li class="nav-item ms-4">
+              <a routerLink="/cart" class="nav-link"><i class="bi bi-cart"></i> Your cart</a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link" routerLink="/login">Login</a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link" routerLink="/register">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Router Outlet for Routing -->
+  <router-outlet></router-outlet>
+</div>

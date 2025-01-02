@@ -1,0 +1,36 @@
+<div class="products">
+    <h2>Available Products</h2>
+    <div class="product-card">
+      <div *ngFor="let product of products" class="product">
+      <img src="assets/food.jpeg" alt="food" height="170px" width="100%">
+        <h3>{{ product.name }}</h3>
+        <p>Category: {{ product.category }}</p>
+        <p> {{ product.description}}</p>
+        <p>Price: ${{ product.price }}</p>
+        <button (click)="addToCart(product)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  
+  <hr />
+  
+  <div class="cart">
+    <h2>Your Cart</h2>
+    <div *ngIf="cart.length === 0">
+      <p>Your cart is empty. Add some products!</p>
+    </div>
+  
+    <div *ngFor="let item of cart" class="cart-item">
+      <img src="assets/food.jpeg" alt="food" height="170px" width="250px">
+      <p> {{ item.productName }}</p>
+      <p>Quantity: {{ item.quantity }}</p>
+      <p>Total: ${{ item.quantity * item.productPrice }}</p>
+      <button (click)="removeFromCart(item.productId)">Remove</button>
+    </div>
+  
+    <div *ngIf="cart.length > 0" class="cart-summary">
+      <h3>Total Price: ${{ calculateTotalPrice() }}</h3>
+      <button (click)="placeOrder()">Place Order</button>
+    </div>
+  </div>
+  

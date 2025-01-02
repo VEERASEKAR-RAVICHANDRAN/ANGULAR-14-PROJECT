@@ -1,0 +1,88 @@
+<div class="register-container">
+    <h2>Register</h2>
+    <form (ngSubmit)="register()">
+      <!-- Username -->
+      <label for="username">Username:</label>
+      <input
+        type="text"
+        id="username"
+        [(ngModel)]="user.username"
+        name="username"
+        required
+      />
+      <br />
+  
+      <!-- Password -->
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        [(ngModel)]="user.password"
+        name="password"
+        required
+      />
+      <br />
+  
+      <!-- Email -->
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        [(ngModel)]="user.email"
+        name="email"
+        required
+      />
+      <br />
+  
+      <!-- First Name -->
+      <label for="firstName">First Name:</label>
+      <input
+        type="text"
+        id="firstName"
+        [(ngModel)]="user.firstName"
+        name="firstName"
+      />
+      <br />
+  
+      <!-- Last Name -->
+      <label for="lastName">Last Name:</label>
+      <input
+        type="text"
+        id="lastName"
+        [(ngModel)]="user.lastName"
+        name="lastName"
+      />
+      <br />
+  
+      <!-- Phone Number -->
+      <label for="phoneNumber">Phone Number:</label>
+      <input
+        type="text"
+        id="phoneNumber"
+        [(ngModel)]="user.phoneNumber"
+        name="phoneNumber"
+        placeholder="123-456-7890"
+      />
+      <br />
+  
+      <!-- Date of Birth -->
+      <label for="dateOfBirth">Date of Birth (YYYY-MM-DD):</label>
+      <input
+        type="date"
+        id="dateOfBirth"
+        [(ngModel)]="user.dateOfBirth"
+        name="dateOfBirth"
+        required
+      />
+      <br />
+  
+      <!-- Submit Button -->
+      <button type="submit">Register</button>
+    </form>
+  
+    <!-- Login Link -->
+    <p>
+      Already have an account? <a routerLink="/login">Login here</a>.
+    </p>
+  </div>
+  

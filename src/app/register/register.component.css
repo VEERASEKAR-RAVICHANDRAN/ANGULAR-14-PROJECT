@@ -1,0 +1,33 @@
+.register-container {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  input {
+    width: 100%;
+    margin: 8px 0;
+    border-radius: 15px;
+    padding: 8px;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  label{
+    color: white;
+    font-family: "Lilita One", serif;
+
+  }
+  p{
+    color: white;
+  }
+  a{
+    color: turquoise;
+    text-decoration: none;
+    /* margin-bottom: 20px; */
+  }

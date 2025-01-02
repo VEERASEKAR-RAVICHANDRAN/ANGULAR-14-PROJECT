@@ -1,0 +1,33 @@
+<div class="order">
+    <h2>Order Summary</h2>
+    <div *ngFor="let item of cart" class="cart-item">
+      <p>Product ID: {{ item.productId }}</p>
+      <p>Quantity: {{ item.quantity }}</p>
+      <!-- <p>Price: {{ item.price }}</p> -->
+    </div>
+  
+    <h3>Shipping Address</h3>
+    <form class="form">
+      <label>
+        Street
+        <input [(ngModel)]="shippingAddress.street " name="street" required="true" />
+      </label>
+      <label>
+        City
+        <input [(ngModel)]="shippingAddress.city" name="city" required="true"/>
+      </label>
+      <label>
+        State
+        <input [(ngModel)]="shippingAddress.state" name="state" required="true" />
+      </label>
+      <label>
+        Postal Code
+        <input [(ngModel)]="shippingAddress.postalCode" name="postalCode" required="true" />
+      </label>
+      <label>
+        Country
+        <input [(ngModel)]="shippingAddress.country" name="country" required="true"/>
+      </label>
+    </form>
+    <button (click)="placeOrder()">Place Order</button>
+  </div>
